@@ -32,6 +32,16 @@
             text-align: center; 
             font-size: 24px; 
             border-bottom: 2px solid #e55b00;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logout-link {
+            color: white;
+            text-decoration: none;
+            background-color: #e55b00;
+            padding: 5px 10px;
+            border-radius: 5px;
         }
         .chat-box { 
             height: 70vh; 
@@ -127,7 +137,10 @@
 </head>
 <body>
     <div class="chat-container">
-        <div class="header">Latest News</div>
+        <div class="header">
+            Latest News
+            <a href="/logout" class="logout-link">Logout</a>
+        </div>
         <div class="chat-box" id="chat-box"></div>
         <div class="input-container">
             <input type="text" id="input" class="input-box" placeholder="Type 'news' to get latest updates...">
@@ -221,4 +234,3 @@
     </script>
 </body>
 </html>
-
