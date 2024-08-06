@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, send_from_directory, render_template, request, redirect, url_for, flash
+from flask import Flask, jsonify, render_template, request, redirect, url_for, flash
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -7,6 +7,8 @@ import feedparser
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
 db = SQLAlchemy(app)
 login_manager = LoginManager()
 login_manager.init_app(app)
@@ -20,8 +22,6 @@ class User(UserMixin, db.Model):
 @login_manager.user_loader
 def load_user(user_id):
     return User.query.get(int(user_id))
-
-db.create_all()
 
 news_index = 0
 news_feed_url = 'https://feeds.feedburner.com/ndtvnews-top-stories'
@@ -41,7 +41,7 @@ def fetch_news():
 @app.route('/')
 @login_required
 def index():
-    return send_from_directory('.', 'index.html')
+    return render_template('index.html')
 
 @app.route('/get-news')
 @login_required
@@ -71,7 +71,7 @@ def signup():
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
-        hashed_password = generate_password_hash(password, method='sha256')
+        hashed_password = generate_password_hash(password, method='pbkdf2:sha256')
         new_user = User(username=username, password=hashed_password)
         db.session.add(new_user)
         db.session.commit()
@@ -86,6 +86,7 @@ def logout():
     return redirect(url_for('login'))
 
 if __name__ == '__main__':
+    with app.app_context():
+        db.create_all()
     fetch_news()
     app.run(debug=True)
-
