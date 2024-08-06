@@ -1,6 +1,6 @@
 # News Chat App
 
-![News Chat App Logo](https://example.com/logo.png)
+![News Chat App Logo](https://drive.google.com/file/d/1U7PADxqEBQOxWxTKVur80QbzzlNybGcS/view?usp=sharing)
 
 Welcome to the News Chat App! This is a Flask web application that allows users to interact with a chat interface to receive the latest news updates from NDTV. Users can request news updates by typing "news" and can choose to receive more updates or end the interaction.
 
@@ -14,6 +14,9 @@ Welcome to the News Chat App! This is a Flask web application that allows users 
 
 ## Screenshots
 
+### User Authentication
+![User Authentication](https://drive.google.com/uc?export=view&id=1QZKNyVS6LSxKl_I_wlUoJNKTTSG8uRPQ)
+
 ### News App Interface
 ![News App Interface](https://drive.google.com/uc?export=view&id=1Sazj7Pprj6_w9iiVU64NG8fniUVGwyHa)
 
@@ -26,8 +29,6 @@ Welcome to the News Chat App! This is a Flask web application that allows users 
 ### No More News
 ![No More News](https://drive.google.com/uc?export=view&id=1pA3Ttk5Cwi7DZ1KaJqzRzZuC9G2nupSa)
 
-### User Authentication
-![User Authentication](https://drive.google.com/uc?export=view&id=1QZKNyVS6LSxKl_I_wlUoJNKTTSG8uRPQ)
 
 ## Future Improvements
 
