@@ -10,7 +10,6 @@ Welcome to the News Chat App! This is a Flask web application that allows users 
 - **Live News Updates**: Fetches and displays the latest news from NDTV.
 - **Responsive Design**: Clean, orange-themed UI that works on all devices.
 - **User-Friendly**: Simple and intuitive user experience.
-- **User Authentication**: Users can log in to personalize their news feed.
 
 ## Screenshots
 
