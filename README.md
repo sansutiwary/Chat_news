@@ -33,7 +33,7 @@ Welcome to the News Chat App! This is a Flask web application that allows users 
    - Provide options for users to select news categories (e.g., sports, technology, politics).
    - **Frontend Changes:**
      - Add category buttons.
-     - Modify the `fetchNews` function to take a category parameter.
+     - Modify the `fetchNews` function to take a category parameter..
 
 2. **Save/Bookmark Articles**
    - Allow users to save or bookmark articles for later reading.
