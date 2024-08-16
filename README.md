@@ -1,7 +1,5 @@
 # News Chat App
 
-![News Chat App Logo](https://example.com/logo.png)
-
 Welcome to the News Chat App! This is a Flask web application that allows users to interact with a chat interface to receive the latest news updates from NDTV. Users can request news updates by typing "news" and can choose to receive more updates or end the interaction.
 
 ## Features
@@ -12,6 +10,9 @@ Welcome to the News Chat App! This is a Flask web application that allows users 
 - **User-Friendly**: Simple and intuitive user experience.
 
 ## Screenshots
+
+### User Authentication
+![User Authentication](https://drive.google.com/uc?export=view&id=1QZKNyVS6LSxKl_I_wlUoJNKTTSG8uRPQ)
 
 ### News App Interface
 ![News App Interface](https://drive.google.com/uc?export=view&id=1Sazj7Pprj6_w9iiVU64NG8fniUVGwyHa)
@@ -25,44 +26,39 @@ Welcome to the News Chat App! This is a Flask web application that allows users 
 ### No More News
 ![No More News](https://drive.google.com/uc?export=view&id=1pA3Ttk5Cwi7DZ1KaJqzRzZuC9G2nupSa)
 
+
 ## Future Improvements
 
 1. **News Categories**
    - Provide options for users to select news categories (e.g., sports, technology, politics).
    - **Frontend Changes:**
      - Add category buttons.
-     - Modify the `fetchNews` function to take a category parameter.
+     - Modify the `fetchNews` function to take a category parameter..
 
-2. **User Authentication**
-   - Enable users to log in to personalize their news feed.
-   - **Frontend Changes:**
-     - Add a login form.
-     - Display personalized messages and news for logged-in users.
-
-3. **Save/Bookmark Articles**
+2. **Save/Bookmark Articles**
    - Allow users to save or bookmark articles for later reading.
    - **Frontend Changes:**
      - Add a "Save" button next to each news item.
      - Create a section to display saved articles.
 
-4. **User Preferences**
+3. **User Preferences**
    - Allow users to set preferences for the type of news they want to receive.
    - **Frontend Changes:**
      - Add a settings page for user preferences.
      - Modify the news-fetching function to filter news based on preferences.
 
-5. **Push Notifications**
+4. **Push Notifications**
    - Send real-time notifications to users when new articles are available.
    - **Frontend Changes:**
      - Implement push notifications using the Web Push API.
 
-6. **Enhanced News Display**
+5. **Enhanced News Display**
    - Include features like image sliders, video news, and audio summaries.
    - **Frontend Changes:**
      - Add a carousel for images and videos.
      - Embed audio players for news summaries.
 
-7. **User Feedback**
+6. **User Feedback**
    - Allow users to rate articles or provide feedback on the news.
    - **Frontend Changes:**
      - Add a rating system for each article.
